@@ -16,6 +16,8 @@ continent =['North America','Europe', 'Asia', 'Australia']*25
 
 df = pd.DataFrame(dict(population=population, Area=Area, continent = continent))
 
+fig, ax = plt.subplots()
+
 colors = {'North America':'red', 'Europe':'green', 'Asia':'blue', 'Australia':'yellow'}
 
 # Get Unique continents
@@ -33,12 +35,12 @@ x = df['population']
 y = df['Area']
 colors = {'North America':'red', 'Europe':'green', 'Asia':'blue', 'Australia':'yellow'}
 
-fig, ax = plt.subplots()
 ax.set_xlabel('Date')
 ax.set_ylabel('Price (USD)')
 ax.set_title("Dummy Data")
 
 plt.style.use('dark_background')
+
 plt.scatter(x, y, s=100*df['population'], alpha=0.3,
             c= df['continent'].map(colors),
             cmap='viridis')
