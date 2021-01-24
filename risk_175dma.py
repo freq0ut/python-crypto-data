@@ -36,7 +36,7 @@ y = df['Area']
 colors = {'North America':'red', 'Europe':'green', 'Asia':'blue', 'Australia':'yellow'}
 
 ax.set_xlabel('Date')
-ax.set_ylabel('Price (USD)')
+ax.set_ylabel('Preice (USD)')
 ax.set_title("Dummy Data")
 
 plt.style.use('dark_background')
